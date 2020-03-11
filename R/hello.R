@@ -109,7 +109,8 @@ genomic <- function(x,y,z) {
     xlab("Chromosomes") +
     geom_point(data = df.tmp2, aes(x = BPcum, y = P,size=0.01, color = factor(col_cat))) +
     scale_x_continuous( label = axisdf$CHR, breaks= axisdf$center ) +
-    geom_point(data = df.tmp, aes(x = BPcum, y = P,size=0.01, color = factor(tissue), shape = factor(col_cat)))+
+    geom_point(data = df.tmp, aes(x = BPcum, y = P,size=0.0005, color = factor(tissue), shape = factor(col_cat)),
+               )+
     scale_colour_manual(name = "Tissue Type", values = c("darkgray", "black", color_tissue), labels = c("Single SNP", "Single SNP", labels_cat))+
     guides(shape = "none", size = "none", colour = guide_legend(reverse = TRUE, override.aes = list(size=6))) +
 
